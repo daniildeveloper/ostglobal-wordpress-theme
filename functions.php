@@ -47,6 +47,7 @@ if (!function_exists('daniildeveloper_ostglobal_setup')):
         register_nav_menus(array(
             'header-top-line-menu' => esc_html__('Top line', 'daniildeveloper-ostglobal'),
             'header-main-menu'     => esc_html__('Main menu', 'daniildeveloper-ostglobal'),
+            'footer-menu'          => esc_html__('Footer Menu', 'daniildeveloper-ostglobal'),
         ));
 
         /*
