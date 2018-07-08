@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     mincss = require('gulp-minify-css'),
     watch = require('gulp-watch'),
-    pug = require('gulp-pug'),
     notify = require('gulp-notify'),
     babel = require('gulp-babel'),
     reload = sync.reload;
@@ -37,7 +36,7 @@ gulp.task('scss', function () {
             return 'Scss: ' + err;
         }))
         .pipe(mincss())
-        .pipe(gulp.dest('./style.scss'))
+        .pipe(gulp.dest('./'))
         .pipe(reload({
             stream: true
         }))
