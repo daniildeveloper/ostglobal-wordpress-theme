@@ -177,3 +177,8 @@ if (class_exists('WooCommerce')) {
  * include menu walkers
  */
 require get_template_directory() . '/inc/menu_walkers/top-header-menu-walker.php';
+
+/**
+ * include metaboxes
+ */
+require get_template_directory() . '/inc/metaboxes/post-custom-background.php';

@@ -98,12 +98,13 @@
 </header>
 <!-- #site-header-wrapper -->
 <!-- Site Page Header -->
-<div class="site-page-header o-has-img" style="background-image: url(../../wp-content/uploads/2017/09/H-Contract-Vehicles.jpg);">
+<div class="site-page-header o-has-img" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( ) )  ?>);">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1>
-                    Contract Vehicles
+                    <?php the_title() ?>
+                    
                 </h1>
             </div>
         </div>
