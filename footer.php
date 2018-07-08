@@ -9,8 +9,10 @@
  * @package daniildeveloper-ostglobal
  */
 
-?>
-
+?>	
+</div>		
+</div>
+		</main>
 	</div><!-- #content -->
 
 	

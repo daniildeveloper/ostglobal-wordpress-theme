@@ -63,8 +63,7 @@
                         <span style="display: none;">
                             Optimal Solutions and Technologies
                         </span>
-                        <div class="retina-image" data-retina-image="http://www.ostglobal.com/wp-content/uploads/2017/11/ost-logo-2x.png" style="background-size: 200px 93px; background-image: url(../../wp-content/uploads/2017/11/ost-logo.png); width: 200px; height: 93px;">
-                        </div>
+                        <?php the_custom_logo(); ?>
                     </a>
                 </div>
             </div>
@@ -232,4 +231,10 @@
     </div>
 </div>
 
-<div id="content" class="site-content">
+<div class="wrapper" id="page-wrapper">
+
+    <div id="content">
+
+        <main class="site-main" id="main">
+            
+            <div class="container">
