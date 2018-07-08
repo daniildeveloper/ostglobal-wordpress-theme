@@ -131,6 +131,8 @@ function daniildeveloper_ostglobal_scripts()
 
     wp_enqueue_script('daniildeveloper-ostglobal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
+    wp_enqueue_script('daniildeveloper-ostglobal-site-script', get_template_directory_uri() . '/js/site.min.js', array('jquery'), '1234', true);
+
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
