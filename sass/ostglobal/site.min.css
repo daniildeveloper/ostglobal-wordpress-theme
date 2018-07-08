@@ -33,7 +33,7 @@ $container-max-widths: (
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("../../../../../fonts.googleapis.com/css%3Ffamily=Open+Sans+Condensed:300,700%257COpen+Sans:300,400,600,700.css");
+/*@import url("../../../../../fonts.googleapis.com/css%3Ffamily=Open+Sans+Condensed:300,700%257COpen+Sans:300,400,600,700.css");*/
 @-ms-viewport {
   width: device-width; }
 
