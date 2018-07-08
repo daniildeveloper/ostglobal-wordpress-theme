@@ -27,25 +27,25 @@
             <div class="row">
                 <div class="col-md-12" id="header-sidebar">
                     <div>
-                        <div class="menu-secondary-menu-container">
-                            <ul class="menu" id="menu-secondary-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-219 current_page_item menu-item-374" id="menu-item-374">
-                                    <a href="index.html">
-                                        Contract Vehicles
-                                    </a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145" id="menu-item-145">
-                                    <a href="http://www.ostglobal.com/contact-us/">
-                                        Contact Us
-                                    </a>
-                                </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140" id="menu-item-140">
-                                    <a href="http://www.ostglobal.com/careers/">
-                                        Careers
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php wp_nav_menu( array(
+                            'theme_location'  => 'header-top-line-menu',
+                            'menu'            => '',
+                            'container'       => 'div',
+                            'container_class' => 'menu-secondary-menu-container',
+                            'container_id'    => 'menu-secondary-menu-container',
+                            'menu_class'      => 'menu',
+                            'menu_id'         => 'menu-secondary-menu',
+                            'echo'            => true,
+                            'fallback_cb'     => 'wp_page_menu',
+                            'before'          => '',
+                            'after'           => '',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                            'depth'           => 0,
+                            'walker'          => new Top_Header_Manu_Walker,
+                        ) ); ?>
+                        
                     </div>
                 </div>
                 <!-- header sidebar end -->
@@ -59,9 +59,9 @@
         <div class="row align-items-center">
             <div class="col-8 col-md-2">
                 <div class="header-logo">
-                    <a aria-hidden="true" href="http://www.ostglobal.com">
+                    <a aria-hidden="true" href="<?php echo get_site_url() ?>">
                         <span style="display: none;">
-                            Optimal Solutions and Technologies
+                            <?php echo get_bloginfo('name'); ?>
                         </span>
                         <?php the_custom_logo(); ?>
                     </a>
