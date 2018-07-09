@@ -90,6 +90,9 @@
                     ) );
                  ?>
                 <!-- Main menu wrapper -->
+                <div class="site-mobile-menu-hamburger" style="max-width: 30px">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
         <!-- .row -->
