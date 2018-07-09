@@ -11,27 +11,40 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function daniildeveloper_ostglobal_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
+function daniildeveloper_ostglobal_body_classes($classes)
+{
+    // Adds a class of hfeed to non-singular pages.
+    if (!is_singular()) {
+        $classes[] = 'hfeed';
+    }
 
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
+    // Adds a class of no-sidebar when there is no sidebar present.
+    if (!is_active_sidebar('sidebar-1')) {
+        $classes[] = 'no-sidebar';
+    }
 
-	return $classes;
+    return $classes;
 }
-add_filter( 'body_class', 'daniildeveloper_ostglobal_body_classes' );
+add_filter('body_class', 'daniildeveloper_ostglobal_body_classes');
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function daniildeveloper_ostglobal_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
-	}
+function daniildeveloper_ostglobal_pingback_header()
+{
+    if (is_singular() && pings_open()) {
+        echo '<link rel="pingback" href="', esc_url(get_bloginfo('pingback_url')), '">';
+    }
 }
-add_action( 'wp_head', 'daniildeveloper_ostglobal_pingback_header' );
+add_action('wp_head', 'daniildeveloper_ostglobal_pingback_header');
+
+function header_menu_search_button($items, $args)
+{
+    if ($args->theme_location === 'header-main-menu') {
+        $items .= '<div class="site-search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>';
+    }
+
+    return $items;
+}
+
+add_action('wp_nav_menu_items', 'header_menu_search_button', 10, 2);
