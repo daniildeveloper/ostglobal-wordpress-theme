@@ -7,7 +7,6 @@ body.show-back-top .site-back-top {
     right: 20px;
     bottom: 20px;
     line-height: 1.1;
-    
     color: #e4b523;
     opacity: 0;
     -webkit-transition: opacity 275ms ease-in-out;
