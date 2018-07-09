@@ -42,6 +42,10 @@ function header_menu_search_button($items, $args)
 {
     if ($args->theme_location === 'header-main-menu') {
         $items .= '<div class="site-search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>';
+        $items .= '<!-- Mobile Menu Hamburger -->
+				<div class="site-mobile-menu-hamburger">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>';
     }
 
     return $items;

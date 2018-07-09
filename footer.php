@@ -125,6 +125,29 @@
 <!-- #site-wrapper-footer -->
 </div><!-- #page -->
 
+<div class="site-search">
+    <div class="e_form">
+        <form action="/" method="get">
+            <label aria-hidden="true" for="s">
+                Search
+            </label>
+            <input id="s" name="s" placeholder="Search..." type="text">
+                <button>
+                    <i aria-hidden="true" class="fa fa-search">
+                    </i>
+                    <span style="display: none;">
+                        Submit
+                    </span>
+                </button>
+                <div class="e_close">
+                    <i aria-hidden="true" class="fa fa-times">
+                    </i>
+                </div>
+            </input>
+        </form>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>
